@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Position } from './models/position';
 
 @Component({
   selector: 'lib-player',
-  template: `
-    <p>
-      player works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './player.component.html',
+  styleUrls: ['./player.component.scss']
 })
-export class PlayerComponent {
+export class PlayerComponent implements OnInit{
+//#region Fields
+@Input()
+position!:Position;
+//#endregion
+
+  constructor(){}
+//#region Public methods
+
+  ngOnInit(): void {
+      
+  }
+//#endregion
 
 }
